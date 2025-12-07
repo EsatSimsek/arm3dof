@@ -1,4 +1,0 @@
-source;share/arm3dof/local_setup.bash
-source;share/arm3dof/local_setup.dsv
-source;share/arm3dof/local_setup.sh
-source;share/arm3dof/local_setup.zsh
