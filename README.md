@@ -6,8 +6,6 @@
 - colcon, ament_cmake
 
 ## Klon / build
-# workspace
-mkdir -p ~/arm_ws/src && cd ~/arm_ws/src
 # (repo'yu buraya yerleştir veya kopyala)
 # örn: git clone <repo-url> .
 cd ~/arm_ws
@@ -16,7 +14,7 @@ source install/setup.bash
 
 ## Başlatma
 # 1) Launch dosyasını çalıştır
-ros2 launch arm3dof arm3dof_launch.py
+ros2 launch arm3dof arm.launch.py
 
 # Bu launch:
 # - gz sim başlatır (empty world)
