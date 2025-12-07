@@ -1,0 +1,51 @@
+[0.018s] Invoking command in '/home/vboxuser/arm_ws/build/arm3dof': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/vboxuser/ros2_ws/install/my_bot_pkg:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake /home/vboxuser/arm_ws/src/arm3dof -DCMAKE_INSTALL_PREFIX=/home/vboxuser/arm_ws/install/arm3dof
+[0.253s] -- The C compiler identification is GNU 13.3.0
+[0.384s] -- The CXX compiler identification is GNU 13.3.0
+[0.417s] -- Detecting C compiler ABI info
+[0.535s] -- Detecting C compiler ABI info - done
+[0.541s] -- Check for working C compiler: /usr/bin/cc - skipped
+[0.542s] -- Detecting C compile features
+[0.544s] -- Detecting C compile features - done
+[0.558s] -- Detecting CXX compiler ABI info
+[0.667s] -- Detecting CXX compiler ABI info - done
+[0.674s] -- Check for working CXX compiler: /usr/bin/c++ - skipped
+[0.675s] -- Detecting CXX compile features
+[0.675s] -- Detecting CXX compile features - done
+[0.701s] -- Found ament_cmake: 2.5.4 (/opt/ros/jazzy/share/ament_cmake/cmake)
+[0.855s] -- Found Python3: /usr/bin/python3 (found version "3.12.3") found components: Interpreter 
+[1.012s] -- Found rclpy: 7.1.6 (/opt/ros/jazzy/share/rclpy/cmake)
+[1.017s] -- Found std_msgs: 5.3.6 (/opt/ros/jazzy/share/std_msgs/cmake)
+[1.093s] -- Found rosidl_generator_c: 4.6.6 (/opt/ros/jazzy/share/rosidl_generator_c/cmake)
+[1.115s] -- Found rosidl_generator_cpp: 4.6.6 (/opt/ros/jazzy/share/rosidl_generator_cpp/cmake)
+[1.150s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[1.182s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[1.303s] -- Configuring done (1.3s)
+[1.306s] -- Generating done (0.0s)
+[1.308s] -- Build files have been written to: /home/vboxuser/arm_ws/build/arm3dof
+[1.314s] Invoked command in '/home/vboxuser/arm_ws/build/arm3dof' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/vboxuser/ros2_ws/install/my_bot_pkg:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake /home/vboxuser/arm_ws/src/arm3dof -DCMAKE_INSTALL_PREFIX=/home/vboxuser/arm_ws/install/arm3dof
+[1.315s] Invoking command in '/home/vboxuser/arm_ws/build/arm3dof': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/vboxuser/ros2_ws/install/my_bot_pkg:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --build /home/vboxuser/arm_ws/build/arm3dof -- -j8 -l8
+[1.359s] Invoked command in '/home/vboxuser/arm_ws/build/arm3dof' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/vboxuser/ros2_ws/install/my_bot_pkg:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --build /home/vboxuser/arm_ws/build/arm3dof -- -j8 -l8
+[1.371s] Invoking command in '/home/vboxuser/arm_ws/build/arm3dof': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/vboxuser/ros2_ws/install/my_bot_pkg:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --install /home/vboxuser/arm_ws/build/arm3dof
+[1.381s] -- Install configuration: ""
+[1.381s] -- Installing: /home/vboxuser/arm_ws/install/arm3dof/share/arm3dof/models
+[1.381s] -- Installing: /home/vboxuser/arm_ws/install/arm3dof/share/arm3dof/models/arm3dof
+[1.381s] -- Installing: /home/vboxuser/arm_ws/install/arm3dof/share/arm3dof/worlds
+[1.381s] -- Installing: /home/vboxuser/arm_ws/install/arm3dof/share/arm3dof/launch
+[1.381s] -- Installing: /home/vboxuser/arm_ws/install/arm3dof/share/arm3dof/launch/arm.launch.py
+[1.381s] -- Installing: /home/vboxuser/arm_ws/install/arm3dof/lib/arm3dof/move_demo.py
+[1.381s] -- Installing: /home/vboxuser/arm_ws/install/arm3dof/share/ament_index/resource_index/package_run_dependencies/arm3dof
+[1.381s] -- Installing: /home/vboxuser/arm_ws/install/arm3dof/share/ament_index/resource_index/parent_prefix_path/arm3dof
+[1.381s] -- Installing: /home/vboxuser/arm_ws/install/arm3dof/share/arm3dof/environment/ament_prefix_path.sh
+[1.381s] -- Installing: /home/vboxuser/arm_ws/install/arm3dof/share/arm3dof/environment/ament_prefix_path.dsv
+[1.381s] -- Installing: /home/vboxuser/arm_ws/install/arm3dof/share/arm3dof/environment/path.sh
+[1.381s] -- Installing: /home/vboxuser/arm_ws/install/arm3dof/share/arm3dof/environment/path.dsv
+[1.381s] -- Installing: /home/vboxuser/arm_ws/install/arm3dof/share/arm3dof/local_setup.bash
+[1.381s] -- Installing: /home/vboxuser/arm_ws/install/arm3dof/share/arm3dof/local_setup.sh
+[1.381s] -- Installing: /home/vboxuser/arm_ws/install/arm3dof/share/arm3dof/local_setup.zsh
+[1.381s] -- Installing: /home/vboxuser/arm_ws/install/arm3dof/share/arm3dof/local_setup.dsv
+[1.382s] -- Installing: /home/vboxuser/arm_ws/install/arm3dof/share/arm3dof/package.dsv
+[1.382s] -- Installing: /home/vboxuser/arm_ws/install/arm3dof/share/ament_index/resource_index/packages/arm3dof
+[1.382s] -- Installing: /home/vboxuser/arm_ws/install/arm3dof/share/arm3dof/cmake/arm3dofConfig.cmake
+[1.382s] -- Installing: /home/vboxuser/arm_ws/install/arm3dof/share/arm3dof/cmake/arm3dofConfig-version.cmake
+[1.383s] -- Installing: /home/vboxuser/arm_ws/install/arm3dof/share/arm3dof/package.xml
+[1.384s] Invoked command in '/home/vboxuser/arm_ws/build/arm3dof' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/vboxuser/ros2_ws/install/my_bot_pkg:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --install /home/vboxuser/arm_ws/build/arm3dof

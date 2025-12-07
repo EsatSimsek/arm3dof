@@ -1,0 +1,3 @@
+# Robot Kol ve Kontrolü
+
+Robot taban omuz ve dirsekten oluşmaktadır. TAban Z ekseni etrafında dönerek Robot'a sağ ve sola dönüş sağlarken omuz ve dirsek Y ekseni etrafında dönerek ileri geri hareketi sağlar. taban 180° dönebilir ancak omuz ve dirsek 90° dönebilir. Titremeleri azalatmak için eklemlere sönümleme eklenmiştir. Eklem kontrolü Gazebo'nun hazır PID denetleyicileri ile yapılırken P hızlı tepki için fazla, D salınmları azaltmak için I ise birikimli hataya gerek duyulmadığı için azdır. Pyhton düğümü ile ise hedefe adım adım ve yumuşak bir şekilde gidilmesi sağlanmıştır. Bu sayede Robot hedeflere akıcı ve kararlı bir şekilde hareket eder. 

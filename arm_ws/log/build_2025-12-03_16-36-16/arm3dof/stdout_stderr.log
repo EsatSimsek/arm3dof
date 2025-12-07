@@ -1,0 +1,24 @@
+-- Install configuration: ""
+-- Up-to-date: /home/vboxuser/arm_ws/install/arm3dof/share/arm3dof/models
+-- Up-to-date: /home/vboxuser/arm_ws/install/arm3dof/share/arm3dof/models/arm3dof
+-- Up-to-date: /home/vboxuser/arm_ws/install/arm3dof/share/arm3dof/models/arm3dof/model.config
+-- Up-to-date: /home/vboxuser/arm_ws/install/arm3dof/share/arm3dof/models/arm3dof/model.sdf
+-- Up-to-date: /home/vboxuser/arm_ws/install/arm3dof/share/arm3dof/worlds
+-- Up-to-date: /home/vboxuser/arm_ws/install/arm3dof/share/arm3dof/launch
+-- Up-to-date: /home/vboxuser/arm_ws/install/arm3dof/share/arm3dof/launch/arm.launch.py
+-- Up-to-date: /home/vboxuser/arm_ws/install/arm3dof/lib/arm3dof/move_demo.py
+-- Up-to-date: /home/vboxuser/arm_ws/install/arm3dof/share/ament_index/resource_index/package_run_dependencies/arm3dof
+-- Up-to-date: /home/vboxuser/arm_ws/install/arm3dof/share/ament_index/resource_index/parent_prefix_path/arm3dof
+-- Up-to-date: /home/vboxuser/arm_ws/install/arm3dof/share/arm3dof/environment/ament_prefix_path.sh
+-- Up-to-date: /home/vboxuser/arm_ws/install/arm3dof/share/arm3dof/environment/ament_prefix_path.dsv
+-- Up-to-date: /home/vboxuser/arm_ws/install/arm3dof/share/arm3dof/environment/path.sh
+-- Up-to-date: /home/vboxuser/arm_ws/install/arm3dof/share/arm3dof/environment/path.dsv
+-- Up-to-date: /home/vboxuser/arm_ws/install/arm3dof/share/arm3dof/local_setup.bash
+-- Up-to-date: /home/vboxuser/arm_ws/install/arm3dof/share/arm3dof/local_setup.sh
+-- Up-to-date: /home/vboxuser/arm_ws/install/arm3dof/share/arm3dof/local_setup.zsh
+-- Up-to-date: /home/vboxuser/arm_ws/install/arm3dof/share/arm3dof/local_setup.dsv
+-- Installing: /home/vboxuser/arm_ws/install/arm3dof/share/arm3dof/package.dsv
+-- Up-to-date: /home/vboxuser/arm_ws/install/arm3dof/share/ament_index/resource_index/packages/arm3dof
+-- Up-to-date: /home/vboxuser/arm_ws/install/arm3dof/share/arm3dof/cmake/arm3dofConfig.cmake
+-- Up-to-date: /home/vboxuser/arm_ws/install/arm3dof/share/arm3dof/cmake/arm3dofConfig-version.cmake
+-- Up-to-date: /home/vboxuser/arm_ws/install/arm3dof/share/arm3dof/package.xml
