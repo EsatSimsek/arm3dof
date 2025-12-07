@@ -6,8 +6,11 @@
 - colcon, ament_cmake
 
 ## Klon / build
+```bash
+mkdir -p arm_ws/src
+cd arm_ws/src
 # (repo'yu buraya yerleştir veya kopyala)
-# örn: git clone <repo-url> .
+# örn: git clone <https://github.com/EsatSimsek/arm3dof.git> .
 cd ~/arm_ws
 colcon build
 source install/setup.bash
