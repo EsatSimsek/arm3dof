@@ -5,13 +5,13 @@
 - ros_gz_sim, ros_gz_bridge (kurulu ve PATH’te)
 - colcon, ament_cmake
 
-## Klon / build
+## Klon / Build
 ```bash
-mkdir -p arm_ws/src
-cd arm_ws/src
-# (repo'yu buraya yerleştir veya kopyala)
+mkdir -p ~/arm_ws/src
+cd ~/arm_ws/src
 git clone https://github.com/EsatSimsek/arm3dof.git
-cd ..
+
+cd ~/arm_ws
 colcon build
 source install/setup.bash
 
