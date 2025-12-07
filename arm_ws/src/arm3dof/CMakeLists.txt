@@ -8,7 +8,6 @@ find_package(std_msgs REQUIRED)
 # Install non-code assets (models/worlds/launch)
 install(DIRECTORY
   models
-  worlds
   launch
   DESTINATION share/${PROJECT_NAME}
 )
