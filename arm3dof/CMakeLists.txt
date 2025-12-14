@@ -6,8 +6,8 @@ find_package(rclpy REQUIRED)
 find_package(std_msgs REQUIRED)
 
 install(DIRECTORY
-  models
-  launch
+  models/
+  launch/
   DESTINATION share/${PROJECT_NAME}
 )
 

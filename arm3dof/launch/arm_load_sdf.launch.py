@@ -13,7 +13,8 @@ def generate_launch_description():
         package='ros_gz_sim',
         executable='create',
         arguments=[
-            '-file', os.path.join(pkg_share, 'models', 'arm3dof', 'model.sdf'), # Dosya üzerinden oku
+            # DÜZELTME: Yolu, GZ_SIM_RESOURCE_PATH (models/ klasörü) içinden göreli veriyoruz.
+            '-file', os.path.join('arm3dof', 'model.sdf'), 
             '-name', 'arm3dof',
             '-z', '0.05'
         ], 
