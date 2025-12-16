@@ -1,11 +1,8 @@
 <?xml version="1.0" ?>
 
 <robot xmlns:xacro="http://www.ros.org/wiki/xacro"
-    xmlns:sensor="http://playerstage.sourceforge.net/gazebo/xmlschema/#sensor"
-    xmlns:controller="http://playerstage.sourceforge.net/gazebo/xmlschema/#controller"
-    xmlns:interface="http://playerstage.sourceforge.net/gazebo/xmlschema/#interface"
     name="arm3dof">
-
+  
   <xacro:property name="base_width" value="0.9" />
   <xacro:property name="base_height" value="0.1" />
   <xacro:property name="base_mass" value="50" />
@@ -18,10 +15,12 @@
 
   <xacro:macro name="box_inertia" params="m w h d">
     <inertial>
+      <origin xyz="0 0 ${h / 2}" rpy="0 0 0" />
       <mass value="${m}" />
-      <inertia ixx="${(m/12) * (h*h + d*d)}" ixy="0.0" ixz="0.0" 
-      iyy="${(m/12) * (w*w + d*d)}" iyz="0.0" 
-      izz="${(m/12) * (w*w + h*h)}" />
+      <inertia 
+      ixx="${(m/12) * (h*h + d*d)}" ixy="0.0" ixz="0.0" 
+      iyy="${(m/12) * (w*w + h*h)}" iyz="0.0" 
+      izz="${(m/12) * (w*w + d*d)}" />
     </inertial>
   </xacro:macro>
 
@@ -41,7 +40,7 @@
       <collision>
         <origin xyz="0 0 ${link_length / 2}" rpy="0 0 0" />
         <geometry>
-          <box size="${link_width} ${link_width} ${link_length}" />
+          <box size="${link_width} ${link_width} ${link_length - 0.05}" />
         </geometry>
       </collision>
       <xacro:box_inertia m="${link_mass}" w="${link_width}" d="${link_width}" h="${link_length}"/> 
@@ -98,10 +97,10 @@
   <joint name="j1_base_yaw" type="revolute">
     <parent link="base_link" />
     <child link="link_1" />
-    <origin xyz="0 0 ${base_height / 2}" rpy="0 0 0" />
+    <origin xyz="0 0 ${base_height}" rpy="0 0 0" />
     <axis xyz="0 0 1" />
     <limit lower="-3.14" upper="3.14" effort="100" velocity="10" />
-    <dynamics damping="0.5"/>
+    <dynamics damping="3.0" friction="1.0"/>
   </joint>
 
   <xacro:arm_link link_name="link_1" color_name="blue" color_rgb="0 0 0.8 1" />
@@ -112,7 +111,7 @@
     <origin xyz="0 0 ${link_length}" rpy="0 0 0" />
     <axis xyz="0 1 0" />
     <limit lower="-1.57" upper="1.57" effort="100" velocity="10" />
-    <dynamics damping="0.5"/>
+    <dynamics damping="3.0" friction="1.0"/>
   </joint>
 
   <xacro:arm_link link_name="link_2" color_name="red" color_rgb="0.5 0 0 1" />
@@ -123,7 +122,7 @@
     <origin xyz="0 0 ${link_length}" rpy="0 0 0" />
     <axis xyz="0 1 0" />
     <limit lower="-1.57" upper="1.57" effort="100" velocity="10" />
-    <dynamics damping="0.5"/>
+    <dynamics damping="3.0" friction="1.0"/>
   </joint>
 
   
@@ -134,27 +133,26 @@
     <plugin filename="gz-sim-joint-position-controller-system" name="gz::sim::systems::JointPositionController">
       <joint_name>j1_base_yaw</joint_name>
       <topic>cmd_pos_j1</topic>
-      <p_gain>200</p_gain>
-      <i_gain>10</i_gain>
-      <d_gain>10</d_gain>
+      <p_gain>200</p_gain>   
+      <i_gain>1</i_gain>    
+      <d_gain>10</d_gain>    
     </plugin>
 
     <plugin filename="gz-sim-joint-position-controller-system" name="gz::sim::systems::JointPositionController">
       <joint_name>j2_base_shoulder</joint_name>
       <topic>cmd_pos_j2</topic>
-      <p_gain>5000</p_gain>
-      <i_gain>200</i_gain>
-      <d_gain>50</d_gain>
+      <p_gain>1000</p_gain>  
+      <i_gain>1</i_gain>    
+      <d_gain>50</d_gain>   
     </plugin>
 
     <plugin filename="gz-sim-joint-position-controller-system" name="gz::sim::systems::JointPositionController">
       <joint_name>j3_base_elbow</joint_name>
       <topic>cmd_pos_j3</topic>
-      <p_gain>1000</p_gain>
-      <i_gain>50</i_gain>
-      <d_gain>20</d_gain>
+      <p_gain>500</p_gain>  
+      <i_gain>1</i_gain>
+      <d_gain>20</d_gain>   
     </plugin>
   </gazebo>
-
 
 </robot>
