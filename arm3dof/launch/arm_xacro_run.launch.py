@@ -10,15 +10,11 @@ def generate_launch_description():
     pkg_name = 'arm3dof'
     pkg_share = get_package_share_directory(pkg_name)
 
-    # 1. Kaynak Yolu Ayarı (Mesh ve Xacro dosyaları için)
-    # ls çıktısına göre dosya yapısı: install/arm3dof/share/arm3dof/arm3dof/...
-    # Bu yüzden GZ_SIM_RESOURCE_PATH'e 'arm3dof' alt klasörünü ekliyoruz.
     set_resource_path = SetEnvironmentVariable(
         name='GZ_SIM_RESOURCE_PATH',
         value=[os.path.join(pkg_share, 'arm3dof')]
     )
 
-    # 2. Gazebo'yu Başlat (Boş Dünya ile)
     gazebo = IncludeLaunchDescription(
         PythonLaunchDescriptionSource(
             os.path.join(get_package_share_directory('ros_gz_sim'), 
@@ -27,8 +23,6 @@ def generate_launch_description():
         launch_arguments={'gz_args': '-r empty.sdf'}.items()
     )
 
-    # 3. Robot State Publisher (Xacro İşleme)
-    # Dosya yolu daha önceki ls çıktına göre doğrulandı: share/arm3dof/arm3dof/model.urdf.xacro
     xacro_file = os.path.join(pkg_share, 'arm3dof', 'model.urdf.xacro')
     
     robot_state_publisher = Node(
@@ -39,8 +33,6 @@ def generate_launch_description():
         parameters=[{'robot_description': Command(['xacro ', xacro_file])}]
     )
 
-    # 4. Gazebo - ROS Köprüsü (Bridge)
-    # Jazzy/Harmonic için en kararlı formatı kullanıyoruz.
     bridge = Node(
         package='ros_gz_bridge',
         executable='parameter_bridge',
@@ -49,21 +41,15 @@ def generate_launch_description():
             'qos_overrides./tf_static.publisher.durability': 'transient_local',
         }],
         arguments=[
-            # --- KOMUTLAR (ROS -> Gazebo) ---
-            # std_msgs/Float64 -> gz.msgs.Double
             '/cmd_pos_j1@std_msgs/msg/Float64]gz.msgs.Double',
             '/cmd_pos_j2@std_msgs/msg/Float64]gz.msgs.Double',
             '/cmd_pos_j3@std_msgs/msg/Float64]gz.msgs.Double',
 
-            # --- GERİ BİLDİRİM (Gazebo -> ROS) ---
-            # gz.msgs.Model -> sensor_msgs/JointState (JointState hatasını aşmak için Model kullanıyoruz)
-            # Not: Tam JointState eşleşmesi hata veriyorsa, en azından saati köprülemek gerekir.
             '/clock@rosgraph_msgs/msg/Clock[gz.msgs.Clock',
         ],
         output='screen'
     )
 
-    # 5. Robotu Spawn Et
     spawn = Node(
         package='ros_gz_sim',
         executable='create',
@@ -75,7 +61,6 @@ def generate_launch_description():
         output='screen'
     )
 
-    # 6. Hareket Kontrol Düğümü (Senin python kodun)
     move_demo = Node(
         package='arm3dof',
         executable='move_demo.py',
